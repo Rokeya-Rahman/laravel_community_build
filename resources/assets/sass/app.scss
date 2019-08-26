@@ -1,0 +1,89 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.counters {
+  margin-right: 30px;
+  font-size: 10px;
+  text-align: center;
+
+  strong {
+    font-size: 2em;
+    display: block;
+  }
+
+  .vote, .answer {
+    height: 60px;
+    width: 60px;
+  }
+
+  .status {
+    &.unanswered {
+      border: none;
+    }
+    &.answered {
+      border: 1px solid $color-green;
+      color: $color-green;
+    }
+    &.answered-accepted {
+      background-color: $color-green;
+      color: $color-white;
+    }
+  }
+
+  .views {
+    margin-top: 10px;
+  }
+}
+
+.form-delete {
+  display: inline;
+}
+
+.votes-control{
+  margin-right: 30px;
+  text-align: center;
+  min-width: 60px;
+  //color: $gray-700;
+
+  span, a{
+    display: block;
+    color: $gray-700;
+  }
+
+  span{
+    &.votes-count{
+      font-size: 25px;
+      color: $gray-600;
+    }
+    &.faboritted{
+      font-size: 12px;
+      color: $blue;
+    }
+  }
+  a{
+    cursor: pointer;
+
+    &.off, &.off:hover{
+      color: $gray-500;
+    }
+
+    &.fabs, &.fabs:hover{
+      color: $blue;
+    }
+    &.vote-accept{
+      color: $green;
+    }
+  }
+}
